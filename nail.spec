@@ -7,6 +7,7 @@ License:	BSD
 Group:		Applications/Mail
 Source0:	http://dl.sourceforge.net/nail/%{name}-%{version}.tar.bz2
 # Source0-md5:	2478bff31a9223afffcb74e4dd021770
+URL:		http://nail.sourceforge.net/
 BuildRequires:	heimdal-devel
 BuildRequires:	openssl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
