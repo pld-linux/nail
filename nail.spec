@@ -1,4 +1,5 @@
-Summary:	A new /bin/mail - the "traditional" way to mail.
+Summary:	A new /bin/mail - the "traditional" way to mail
+Summary(pl):	Nowy /bin/mail - "tradycyjny" sposób wysy³ania poczty
 Name:		nail
 Version:	11.20
 Release:	1
@@ -6,8 +7,8 @@ License:	BSD
 Group:		Applications/Mail
 Source0:	http://dl.sourceforge.net/nail/%{name}-%{version}.tar.bz2
 # Source0-md5:	f08dab4fb6a069bc6876b0b58116716b
-BuildRequires:	openssl-devel
 BuildRequires:	heimdal-devel
+BuildRequires:	openssl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,7 +25,7 @@ rapides et est souvent utilisé dans les scripts shell.
 
 %description -l pl
 Przy pomocy programu /bin/mail mo¿na wysy³aæ pocztê. Czêsto jest on
-wykorzystywany w skryptach shella.
+wykorzystywany w skryptach pow³oki.
 
 %description -l tr
 /bin/mail programý hýzlý olarak mektup göndermek için kullanýlabilir.
@@ -34,22 +35,27 @@ Genellikle kabuk yorumlayýcýlarý içinde kullanýlýr.
 %setup -q
 
 %build
-%{__make} CFLAGS="%{rpmcflags}" \
-	  CC="%{__cc}"
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
-cp *.1 $RPM_BUILD_ROOT%{_mandir}/man1/
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT UCBINSTALL=/usr/bin/install PREFIX=%{_prefix}
+install *.1 $RPM_BUILD_ROOT%{_mandir}/man1
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	UCBINSTALL=/usr/bin/install \
+	PREFIX=%{_prefix}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS INSTALL README TODO ChangeLog
-%config(noreplace) /etc/nail.rc
+%doc AUTHORS ChangeLog README TODO
+%config(noreplace) %verify(not md5 mtime size) /etc/nail.rc
 %attr(755,root,root) %{_bindir}/nail
 %{_mandir}/man1/*
