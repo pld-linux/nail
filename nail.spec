@@ -34,7 +34,8 @@ Genellikle kabuk yorumlayýcýlarý içinde kullanýlýr.
 %setup -q
 
 %build
-%{__make} CFLAGS="%{rpmcflags}"
+%{__make} CFLAGS="%{rpmcflags}" \
+	  CC="%{__cc}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -48,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS INSTALL README TODO I18N ChangeLog
+%doc AUTHORS INSTALL README TODO ChangeLog
 %config(noreplace) /etc/nail.rc
 %attr(755,root,root) %{_bindir}/nail
 %{_mandir}/man1/*
