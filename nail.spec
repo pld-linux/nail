@@ -1,7 +1,7 @@
 Summary:	A new /bin/mail - the "traditional" way to mail
 Summary(pl):	Nowy /bin/mail - "tradycyjny" sposób wysy³ania poczty
 Name:		nail
-Version:	11.21
+Version:	11.22
 Release:	1
 License:	BSD
 Group:		Applications/Mail
@@ -9,7 +9,7 @@ Source0:	http://dl.sourceforge.net/nail/%{name}-%{version}.tar.bz2
 # Source0-md5:	2478bff31a9223afffcb74e4dd021770
 URL:		http://nail.sourceforge.net/
 BuildRequires:	heimdal-devel
-BuildRequires:	openssl-devel
+BuildRequires:	openssl-devel >= 0.9.7d
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
