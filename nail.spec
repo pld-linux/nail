@@ -54,7 +54,7 @@ install *.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 cat <<EOF >$RPM_BUILD_ROOT/bin/mail
 #!/bin/sh
-env bsdcompat=1 /bin/nail
+exec env bsdcompat=1 /bin/nail
 EOF
 
 install nail.rc $RPM_BUILD_ROOT/etc/skel/.mailrc
