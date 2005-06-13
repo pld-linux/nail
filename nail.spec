@@ -2,7 +2,7 @@ Summary:	A new /bin/mail - the "traditional" way to mail
 Summary(pl):	Nowy /bin/mail - "tradycyjny" sposób wysy³ania poczty
 Name:		nail
 Version:	11.22
-Release:	1
+Release:	1.1
 License:	BSD
 Group:		Applications/Mail
 Source0:	http://dl.sourceforge.net/nail/%{name}-%{version}.tar.bz2
@@ -42,14 +42,28 @@ Genellikle kabuk yorumlayýcýlarý içinde kullanýlýr.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,/etc/skel,/bin}
 
 install *.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	UCBINSTALL=/usr/bin/install \
-	PREFIX=%{_prefix}
+	PREFIX=%{_prefix} \
+	BINDIR=/bin
+
+cat <<EOF >$RPM_BUILD_ROOT/bin/mail
+#!/bin/sh
+env bsdcompat=1 /bin/nail
+EOF
+
+install nail.rc $RPM_BUILD_ROOT/etc/skel/.mailrc
+
+ln -sf ../../bin/mail $RPM_BUILD_ROOT%{_bindir}/Mail
+ln -sf nail $RPM_BUILD_ROOT%{_bindir}/mailx
+
+echo .so nail.1 > $RPM_BUILD_ROOT%{_mandir}/man1/mail.1
+echo .so nail.1 > $RPM_BUILD_ROOT%{_mandir}/man1/Mail.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -58,5 +72,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %config(noreplace) %verify(not md5 mtime size) /etc/nail.rc
-%attr(755,root,root) %{_bindir}/nail
+
+/etc/skel/.mailrc
+
+%attr(755,root,root) /bin/[mn]ail*
+%attr(755,root,root) %{_bindir}/Mail
 %{_mandir}/man1/*
