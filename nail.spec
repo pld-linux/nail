@@ -12,7 +12,6 @@ Patch1:		%{name}-bsdcompat.patch
 URL:		http://nail.sourceforge.net/
 BuildRequires:	heimdal-devel
 BuildRequires:	openssl-devel >= 0.9.7d
-Requires:	%{name}-mail = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
