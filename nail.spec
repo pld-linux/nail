@@ -27,8 +27,8 @@ and receiving mail.
 Nail zosta³ stworzony na podstawie Berkeley Mail z zamys³em
 dostarczenia funkcjonalnosci komendy POSIX mailx z dodatkowym
 wsparciem dla MIME, IMAP, POP3 i SMTP. Nail dostacza rozszerzone
-mo¿liwo¶ci przy pracy interaktywnej, jak od³±czon± pracê dla IMAP,
-w±tkowanie wiadomo¶ci, punktacja i filtrowanie.
+mo¿liwo¶ci przy pracy interaktywnej, takie jak od³±czone operacje dla
+IMAP, w±tkowanie wiadomo¶ci, punktacja i filtrowanie.
 
 %package mail
 Summary:	A new /bin/mail - the "traditional" way to mail
