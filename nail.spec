@@ -1,5 +1,5 @@
 Summary:	An enhanced implementation of the mailx command
-Summary(pl):	Rozszerzona implementacja komendy mailx
+Summary(pl.UTF-8):   Rozszerzona implementacja komendy mailx
 Name:		nail
 Version:	11.25
 Release:	2
@@ -23,16 +23,16 @@ operation for IMAP, message threading, scoring, and filtering.
 It is also usable as a mail batch language, both for sending
 and receiving mail.
 
-%description -l pl
-Nail zosta³ stworzony na podstawie Berkeley Mail z zamys³em
+%description -l pl.UTF-8
+Nail zostaÅ‚ stworzony na podstawie Berkeley Mail z zamysÅ‚em
 dostarczenia funkcjonalnosci komendy POSIX mailx z dodatkowym
 wsparciem dla MIME, IMAP, POP3 i SMTP. Nail dostacza rozszerzone
-mo¿liwo¶ci przy pracy interaktywnej, takie jak od³±czone operacje dla
-IMAP, w±tkowanie wiadomo¶ci, punktacja i filtrowanie.
+moÅ¼liwoÅ›ci przy pracy interaktywnej, takie jak odÅ‚Ä…czone operacje dla
+IMAP, wÄ…tkowanie wiadomoÅ›ci, punktacja i filtrowanie.
 
 %package mail
 Summary:	A new /bin/mail - the "traditional" way to mail
-Summary(pl):	Nowy /bin/mail - "tradycyjny" sposób wysy³ania poczty
+Summary(pl.UTF-8):   Nowy /bin/mail - "tradycyjny" sposÃ³b wysyÅ‚ania poczty
 Group:		Applications/Mail
 Obsoletes:	mailx
 
@@ -40,21 +40,21 @@ Obsoletes:	mailx
 The /bin/mail program can be used to send quick mail messages, and is
 often used in shell scripts.
 
-%description mail -l de
+%description mail -l de.UTF-8
 Das /bin/mail-Programm dient zum Versenden von Quick-Mail- Nachrichten
-und wird häufig in Shell-Skripts verwendet.
+und wird hÃ¤ufig in Shell-Skripts verwendet.
 
-%description mail -l fr
-Le programme /bin/mail peut être utilisé pour envoyer des mails
-rapides et est souvent utilisé dans les scripts shell.
+%description mail -l fr.UTF-8
+Le programme /bin/mail peut Ãªtre utilisÃ© pour envoyer des mails
+rapides et est souvent utilisÃ© dans les scripts shell.
 
-%description mail -l pl
-Przy pomocy programu /bin/mail mo¿na wysy³aæ pocztê. Czêsto jest on
-wykorzystywany w skryptach pow³oki.
+%description mail -l pl.UTF-8
+Przy pomocy programu /bin/mail moÅ¼na wysyÅ‚aÄ‡ pocztÄ™. CzÄ™sto jest on
+wykorzystywany w skryptach powÅ‚oki.
 
-%description mail -l tr
-/bin/mail programı hızlı olarak mektup göndermek için kullanılabilir.
-Genellikle kabuk yorumlayıcıları içinde kullanılır.
+%description mail -l tr.UTF-8
+/bin/mail programÄ± hÄ±zlÄ± olarak mektup gÃ¶ndermek iÃ§in kullanÄ±labilir.
+Genellikle kabuk yorumlayÄ±cÄ±larÄ± iÃ§inde kullanÄ±lÄ±r.
 
 %prep
 %setup -q
