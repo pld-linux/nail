@@ -1,5 +1,5 @@
 Summary:	An enhanced implementation of the mailx command
-Summary(pl.UTF-8):   Rozszerzona implementacja komendy mailx
+Summary(pl.UTF-8):	Rozszerzona implementacja komendy mailx
 Name:		nail
 Version:	11.25
 Release:	2
@@ -32,7 +32,7 @@ IMAP, wątkowanie wiadomości, punktacja i filtrowanie.
 
 %package mail
 Summary:	A new /bin/mail - the "traditional" way to mail
-Summary(pl.UTF-8):   Nowy /bin/mail - "tradycyjny" sposób wysyłania poczty
+Summary(pl.UTF-8):	Nowy /bin/mail - "tradycyjny" sposób wysyłania poczty
 Group:		Applications/Mail
 Obsoletes:	mailx
 
