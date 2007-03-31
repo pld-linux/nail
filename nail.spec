@@ -2,7 +2,7 @@ Summary:	An enhanced implementation of the mailx command
 Summary(pl.UTF-8):	Rozszerzona implementacja komendy mailx
 Name:		nail
 Version:	11.25
-Release:	2
+Release:	3
 License:	BSD
 Group:		Applications/Mail
 Source0:	http://dl.sourceforge.net/nail/%{name}-%{version}.tar.bz2
@@ -10,7 +10,7 @@ Source0:	http://dl.sourceforge.net/nail/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-pure.patch
 Patch1:		%{name}-bsdcompat.patch
 URL:		http://nail.sourceforge.net/
-BuildRequires:	heimdal-devel >= 0.7
+BuildRequires:	krb5-devel
 BuildRequires:	openssl-devel >= 0.9.7d
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
