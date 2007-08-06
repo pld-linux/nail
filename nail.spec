@@ -2,7 +2,7 @@ Summary:	An enhanced implementation of the mailx command
 Summary(pl.UTF-8):	Rozszerzona implementacja komendy mailx
 Name:		nail
 Version:	11.25
-Release:	3
+Release:	4
 License:	BSD
 Group:		Applications/Mail
 Source0:	http://dl.sourceforge.net/nail/%{name}-%{version}.tar.bz2
@@ -34,7 +34,7 @@ IMAP, wątkowanie wiadomości, punktacja i filtrowanie.
 Summary:	A new /bin/mail - the "traditional" way to mail
 Summary(pl.UTF-8):	Nowy /bin/mail - "tradycyjny" sposób wysyłania poczty
 Group:		Applications/Mail
-Obsoletes:	mailx
+Conflicts:	mailx
 
 %description mail
 The /bin/mail program can be used to send quick mail messages, and is
