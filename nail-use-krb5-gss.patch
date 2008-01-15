@@ -1,0 +1,18 @@
+--- nail-11.25/makeconfig~	2004-11-17 20:09:19.000000000 +0100
++++ nail-11.25/makeconfig	2008-01-15 18:49:49.000000000 +0100
+@@ -364,11 +364,10 @@
+ }
+ !
+ 
+-<$tmp2.c link_check 'for GSSAPI in libgss' '#define USE_GSSAPI' '-lgss' ||
+-	<$tmp2.c link_check 'for GSSAPI in libgssapi_krb5' \
+-			'#define USE_GSSAPI' '-lgssapi_krb5' ||
+-		link_check 'for GSSAPI in libgssapi_krb5, old-style' \
+-				'#define USE_GSSAPI
++<$tmp2.c link_check 'for GSSAPI in libgssapi_krb5' \
++		'#define USE_GSSAPI' '-lgssapi_krb5' ||
++	link_check 'for GSSAPI in libgssapi_krb5, old-style' \
++			'#define USE_GSSAPI
+ #define GSSAPI_OLD_STYLE' '-lgssapi_krb5' <<\! || \
+ 			link_check 'for GSSAPI in libgssapi' \
+ 				'#define USE_GSSAPI
