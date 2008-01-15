@@ -2,13 +2,14 @@ Summary:	An enhanced implementation of the mailx command
 Summary(pl.UTF-8):	Rozszerzona implementacja komendy mailx
 Name:		nail
 Version:	11.25
-Release:	4
+Release:	5
 License:	BSD
 Group:		Applications/Mail
 Source0:	http://dl.sourceforge.net/nail/%{name}-%{version}.tar.bz2
 # Source0-md5:	54f42db31911d734fcf37a89b72d4df7
 Patch0:		%{name}-pure.patch
 Patch1:		%{name}-bsdcompat.patch
+Patch2:		%{name}-use-krb5-gss.patch
 URL:		http://nail.sourceforge.net/
 BuildRequires:	krb5-devel
 BuildRequires:	openssl-devel >= 0.9.7d
@@ -61,6 +62,7 @@ Genellikle kabuk yorumlayıcıları içinde kullanılır.
 cp makeconfig makeconfig-pure
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 chmod 755 makeconfig*
 
 %build
