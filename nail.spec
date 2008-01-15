@@ -34,7 +34,7 @@ IMAP, wątkowanie wiadomości, punktacja i filtrowanie.
 Summary:	A new /bin/mail - the "traditional" way to mail
 Summary(pl.UTF-8):	Nowy /bin/mail - "tradycyjny" sposób wysyłania poczty
 Group:		Applications/Mail
-Conflicts:	mailx
+Obsoletes:	mailx
 
 %description mail
 The /bin/mail program can be used to send quick mail messages, and is
