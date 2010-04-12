@@ -2,7 +2,7 @@ Summary:	An enhanced implementation of the mailx command
 Summary(pl.UTF-8):	Rozszerzona implementacja komendy mailx
 Name:		nail
 Version:	11.25
-Release:	6
+Release:	7
 License:	BSD
 Group:		Applications/Mail
 Source0:	http://dl.sourceforge.net/nail/%{name}-%{version}.tar.bz2
