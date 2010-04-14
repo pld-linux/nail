@@ -1,3 +1,6 @@
+
+Obsoleted by/renamed to mailx
+
 Summary:	An enhanced implementation of the mailx command
 Summary(pl.UTF-8):	Rozszerzona implementacja komendy mailx
 Name:		nail
